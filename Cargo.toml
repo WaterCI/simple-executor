@@ -1,0 +1,17 @@
+[package]
+name = "docker-executor"
+version = "0.1.0+alpha"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "~1.0.57"
+waterlib = { git = "https://github.com/WaterCI/waterlib" }
+serde = { version = "~1.0.137", features = ["derive"] }
+serde_yaml = { version = "~0.8.24" }
+rmp-serde = "~1.1.0"
+clap = { version = "~3.1.18", features = ["derive"] }
+sentry = { version = "~0.26.0", features = ["backtrace", "contexts", "panic", "transport", "anyhow", "tracing"] }
+tracing = { version = "~0.1.35", features = ["log"] }
+tracing-subscriber = { version = "~0.3.11", features = ["env-filter"] }
